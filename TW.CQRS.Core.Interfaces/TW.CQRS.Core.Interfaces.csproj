@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD542479-B939-4D3C-837D-D69208DA9C79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TW.CQRS.Core.Interfaces</RootNamespace>
+    <AssemblyName>TW.CQRS.Core.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Aggregate\IAggregate.cs" />
+    <Compile Include="Domain\Aggregate\IAggregateCreationEvent.cs" />
+    <Compile Include="Domain\Aggregate\IAggregateEvent.cs" />
+    <Compile Include="Domain\Aggregate\IAggregateRootEventStorage.cs" />
+    <Compile Include="Domain\Aggregate\IAggregateRoot.cs" />
+    <Compile Include="Domain\Command\IDomainCommand.cs" />
+    <Compile Include="Domain\Command\IDomainCommandBus.cs" />
+    <Compile Include="Domain\Command\IDomainCommandHandler.cs" />
+    <Compile Include="Domain\Command\IGenericDomainCommandHandler.cs" />
+    <Compile Include="Domain\Event\IDomainEvent.cs" />
+    <Compile Include="Domain\Event\IDomainEventBus.cs" />
+    <Compile Include="Domain\Event\IDomainEventHandler.cs" />
+    <Compile Include="Domain\Event\IGenericDomainEventHandler.cs" />
+    <Compile Include="Domain\IDomainMessage.cs" />
+    <Compile Include="Domain\IDomainRepository.cs" />
+    <Compile Include="Domain\IEntity.cs" />
+    <Compile Include="Domain\IHandlerFactory.cs" />
+    <Compile Include="Domain\IMessage.cs" />
+    <Compile Include="IBus.cs" />
+    <Compile Include="INormaliser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\IReportingEntity.cs" />
+    <Compile Include="Reporting\IReportingRepository.cs" />
+    <Compile Include="Reporting\IReportingUpdatesBus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TW.Commons\TW.Commons.csproj">
+      <Project>{f7a0f34d-6775-46fd-ba0a-e4a29a36f677}</Project>
+      <Name>TW.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

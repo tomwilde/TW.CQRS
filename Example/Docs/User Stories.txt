@@ -1,0 +1,36 @@
+Stories
+==========================================================================================================================================================
+
+Stories:        provide a starting point for    BDD Scenarios:
+	As a ???										Given ???
+	I want ???          ===============>			When ???
+	So that ???										Then ???
+
+	=> BDD scenarios are the acceptance tests for each story.
+
+
+Actors:
+	Passer By  -  potential client
+	Client     -  the buyer
+	Seller     -  the current owner
+	Agent      -  the estate agent
+	Company    -  the estate agent company
+
+Stories:
+	As a - Passer By - I want - to see featured properties in the shop window - so that - I can express an interest.
+	As a - Passer By - I want - to be able to express an interest - so that - I can arrange a viewing
+	As a - Passer By - I want - to be able to register with an agent - so that - I am known to the company and become a client
+
+	As a - Client - I want - to be able to arrange a viewing - so that - I may see a property of interest
+	As a - Client - I want - to be able to submit a bid for a property I'm interested in - so that - the agent can check with the Seller how to proceed
+
+	As a - Seller - I want - to be able to register with an agent - so that - I am known to the company and become a seller
+	As a - Seller - I want - to be able to register my properties with an agent - so that - the company has my properties to sell on my behalf
+
+	As an - Agent - I want - to contact the seller with an offer
+	As an - Agent - I want - to contact the client with an offer reply
+
+	As a - Client - I want - to be able to arrange a viewing - so that - I may see a property
+	As a - Seller - I want - register with an agent - so that - I am known to the company and become a seller
+
+

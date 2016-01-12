@@ -1,0 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace TW.CQRS.Core.Interfaces.Reporting
+{
+    public interface IRepository
+    {
+        T Get<T>(Guid id) where T : class, new();
+        List<T> GetAll<T>() where T : class, new();
+    }
+}

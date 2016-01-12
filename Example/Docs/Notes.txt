@@ -1,0 +1,40 @@
+Questions:
+======================================================================
+
+Where do repositories sit?
+	=> on the outer ring of the domain, in the domain command handlers?
+
+How are snapshots persisted?
+	=> they are serialised and stored against a version number for the aggegrate
+
+Should I use 'AggregateRoot' as a structural component of the domain?
+	=> pros and cons here.... 
+
+Snapshot storage
+	=> use the event store sql db for now, move to key/value eventually
+
+Statements:
+======================================================================
+
+Domain Events / Commands express how the Bounded Context interacts with its environment
+
+Event sourcing should only track *Aggregate* changes, not Bounded Context changes
+	=> do not apply ES to Domain Events!
+
+Tests:
+======================================================================
+
+There are different layers of tests here..
+
+Domain tests - Tests that operate solely on the domain and are expressed in terms of commands and events
+System tests - BDD style acceptance tests that are run using an in-memory complete system
+
+
+TODO:
+======================================================================
+
+Storyboard the use cases & decide on UI
+BDD tests - should target the domain assembly ONLY
+Create a server process to host the domain.
+NHib integration for the Reports DB
+SQL scripts for the event store...
